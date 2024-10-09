@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #3498DB;
+    --secondary-color: #2ECC71;
+    --background-color: #ECF0F1;
+    --text-color: #34495E;
+    --card-background: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, .1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+    line-height: 1.6rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+form .product-input {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    outline: none;
+}
+
+form .product-input:focus {
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--background-color);
+    border-radius: 25px;
+    transition: ease .8s;
+}
+
+form button:hover {
+    background-color: #2980B9;
+}
+/* Product List */
+.product-list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 30px;
+}
+
+.product-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    padding: 20px;
+    transition: ease .5s;
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
